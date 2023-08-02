@@ -1,0 +1,218 @@
+ @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+--Light-red: hsl(0, 100%, 67%);
+--Orangey-yellow: hsl(39, 100%, 56%);
+--Green-teal: hsl(166, 100%, 37%);
+--Cobalt-blue: hsl(234, 85%, 45%);
+
+ /*Gradients*/
+
+--Light-slate-blue-background: hsl(252, 100%, 67%);
+--Light-royal-blue-background: hsl(241, 81%, 54%);
+
+--Violet-blue-circle: hsla(256, 72%, 46%, 1);
+--Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+
+
+/*Neutral*/
+
+--White: hsl(0, 0%, 100%);
+--Pale-blue: hsl(221, 100%, 96%);
+--Light-lavender: hsl(241, 100%, 89%);
+--Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 200ms;
+}
+
+body {
+
+
+    font-family: "Hanken Grotesk", sans-serif;
+    background: var(--Dark-gray-blue);
+}
+
+.container {
+    background: var(--White);
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    margin: auto auto;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    padding: 2rem 3rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result-text {
+    color: var(--Light-lavender);
+    font-weight: 500; 
+    font-size: 1rem;
+}
+
+.round{
+    background: linear-gradient(to bottom, var(--Violet-blue-circle), var(--Persian-blue-circle));
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.round-scores {
+    text-align: center;
+}
+
+.round-scores h2 {
+    color: var(--White);
+    font-size: 3rem;
+}
+
+.round-scores span {
+    color: var(--Light-lavender);
+    font-weight: bold;
+    opacity: .7;
+}
+
+.feedback {
+    color: var(--Pale-blue);
+    font-size: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.score {
+    text-align: center;
+    font-weight: 500;
+    max-width: 18rem;
+
+    color: var(--Light-lavender);
+}
+
+.sum {
+    color: var(--Dark-gray-blue);
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 1rem 2.5rem;
+    margin: 1rem;
+    border-radius:10px;
+}
+
+.summary:nth-of-type(1){
+    color: var(--Light-red);
+    background: hsla(0, 100%, 67%, .1);
+}
+
+.summary:nth-of-type(2){
+    color: var(--Orangey-yellow);
+    background-color: hsla(39, 100%, 56%, .1);
+}
+
+.summary:nth-of-type(3){
+    color: var(--Green-teal);
+    background-color: hsla(166, 100%, 37%, .1);
+}
+
+.summary:nth-of-type(4){
+    color: var(--Cobalt-blue);
+    background-color: hsla(234, 85%, 45%, .1);
+}
+
+.black {
+    color: var(--Dark-gray-blue);
+}
+
+.grey {
+    color: var(--Light-lavender);
+}
+
+.btn {
+    color: var(--Pale-blue);
+    border-radius: 30px;
+    background-color: var(--Dark-gray-blue);
+    width: 80%;
+    font-weight: 500;
+    padding: 1rem;
+    margin-left: 2.5rem ;
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 1rem;
+    color: black;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background: var(--White);
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: var(--White);
+        min-height: 500px;
+        box-shadow: rgba(20, 20, 37, 0.219);
+        background: var(--White);
+        margin: 0 auto;       
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }s
+
+
+    .top {
+        border-radius: 2rem;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .bottom {
+        background: var(--White);
+        margin-top: 3rem;
+    }
+
+    .round {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .feedback {
+        margin-bottom: 2.5rem;
+    }
+
+    
+    .score {
+        max-width: 20rem;    
+    }
+
+    .summary {
+        margin-top: 1.5rem;
+    }
+
+}
